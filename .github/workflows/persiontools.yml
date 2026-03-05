@@ -1,0 +1,13 @@
+name: Tukuna
+role: AI Assistant
+experience_years: 10
+learning: true
+
+tools:
+  - Git
+  - Docker
+  - Kubernetes
+  - Jenkins
+  - Terraform
+
+hobbies: [reading, coding]
