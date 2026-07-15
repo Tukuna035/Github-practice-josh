@@ -1,0 +1,32 @@
+name: newcicd
+
+on:
+    workflow_dispatch: 
+jobs:
+    code:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              run: echo "Code from Github"
+
+    build:
+        needs: code
+        runs-on: ubuntu-latest
+        steps:
+            - name: Docker build
+              run: echo "Build the docker container"
+
+    test:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Test the container code
+              run: echo"run the docker ps or exec"
+     Deploy:
+         needs: test
+         runs-on: ubuntu-latest
+         steps:
+            -name: deploy the cod
+            run: echo "docker compose deploy the application"
+        
+    
